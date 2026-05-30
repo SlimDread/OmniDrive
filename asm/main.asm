@@ -103,7 +103,10 @@ CommandTableCustom:
 .org BDScrambleHookAddr
     bl ChangeDiscRWModeHook
 
-.org DVDScramblePatchAddr
+; Forces drive to always change the read mode when disc is being read
+.org DVDScramblePatchAddr1
+    nop
+.org DVDScramblePatchAddr2
     nop
 
 .org DVDScrambleHookAddr

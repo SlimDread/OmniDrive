@@ -188,7 +188,7 @@ void ReadDVDRaw() {
 
     DVDCheckLayer(2);
 
-    DISC_SECTOR_REGISTER = 0xF8; // return full sector
+    DISC_SECTOR_REGISTER = 0x98; // return full sector
 
     if (DiscIsDVDRAM())
         ReadDVDRAMData(cdb[1] & 0x08);

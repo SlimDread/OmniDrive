@@ -86,7 +86,8 @@
 .definedatalabel CDLeadOutPatchAddr5,0x14291A // nop
 .definedatalabel CDLeadOutPatchAddr6,0x142934 // nop
 
-.definedataLabel DVDScramblePatchAddr,0x144A32
+.definedataLabel DVDScramblePatchAddr1,0x144A28
+.definedataLabel DVDScramblePatchAddr2,0x144A32
 .definedatalabel DVDScrambleHookAddr,0x144A36
 .definedatalabel DVDEDCHookAddr,0x144D8E
 .definedatalabel InquiryDataPatch,0x14F83E
