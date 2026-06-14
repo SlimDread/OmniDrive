@@ -95,9 +95,23 @@ void EnableXGD() {
     WriteDiscStructMemByte((TocOffset + 0x11), discSize & 0xFF);
 }
 
+DWORD DVDMinusReadCheckHook() {
+    /* ARMIPS BUG WORKAROUND */
+    asm("nop");
+    
+    DWORD ret = DVDMinusReadCheck();
+
+    // force read if using READ DISC RAW
+    if (!ret && cdb[0] == 0xC0)
+        ret = 1;
+
+    return ret;
+}
+
 DWORD ReadDVDTOCHook(DWORD unk) {
     // patch compressed code in memory at runtime
     *DVDCharacteristicsPatchPtr = 0x19;
+    *DVDTOCReadPatchPtr = 0x01;
 
     DWORD ret = ReadDVDTOC(unk);
 

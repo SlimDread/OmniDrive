@@ -54,6 +54,8 @@ CommandTableCustom:
         .d32 TocOffsetValue
     DVDCharacteristicsPatchPtr:
         .d32 DVDCharacteristicsPatchAddr
+    DVDTOCReadPatchPtr:
+        .d32 DVDTOCReadPatchAddr
 .thumb
 
 .org CDDataSpeedPatchAddr
@@ -100,6 +102,9 @@ CommandTableCustom:
 
 .org ScrambleHookAddr
     bl ChangeDiscRWModeHook
+
+.org DVDMinusReadCheckHookAddr
+    bl DVDMinusReadCheckHook
 
 .org BDScramblePatchAddr
     nop
