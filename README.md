@@ -16,10 +16,10 @@ OmniDrive is a firmware modification for MediaTek MT1959-based optical disc driv
 | DVD (ROM/RAM/±R/±RW) | ☑️ |
 | BD (ROM/R/RE) | ☑️ |
 | BD-XL (R/RE) | ☑️ |
-| UHD-BD | ☑️ |
+| UHD-BD | ✅ | Disc is natively supported by UHD Official drives
 | PlayStation 3 BD-ROM | ☑️ | Disc contents are encrypted, disc key is not retrievable
 | PlayStation 4 BD-ROM | ☑️ | Game files are encrypted, encryption key is not retrievable
-| PlayStation 5 BD-ROM | ☑️ | Game files are encrypted, encryption key is not retrievable
+| PlayStation 5 UHD BD-ROM | ✅ | Game files are encrypted, encryption key is not retrievable<br>Disc is natively supported by UHD Official drives
 | Xbox (XGD1) | ✅ |
 | Xbox 360 (XGD2/XGD3) | ✅ |
 | Xbox One/Series (XGD4) | ✅ | Game files are encrypted, encryption key is not retrievable
